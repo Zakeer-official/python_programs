@@ -667,3 +667,7 @@ for i in range(1,n+1):
     print(" "*(2*n-i+1)+"* "*i)
 for i in range(1,n+1):
     print(" "*(n-i+1)+"* "*i+" "*(n-i)+" "*(n-i)+"* "*i)
+
+print("\nStill many patterns will be updated soon...\n")
+
+    
