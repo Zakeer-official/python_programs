@@ -652,6 +652,16 @@ for i in range(1,n+1):
     print("*"*(2*i))
     print("*"*(2*i))
 
+print("\nPattern 101\n")
+for i in range(1,n+1):
+    print("*"*i)
+for i in range(3,2*n-2):
+    print("*"*i)
+for i in range(n,2*n):
+    print("*"*i)
+for i in range(1,n):
+    print(" "*((n//2)-1)+"*"*3)
+
 print("\nPattern 102\n")  #tripod triange pattern
 for i in range(1,n+1):
     print(" "*(2*n-i+1)+"* "*i)
