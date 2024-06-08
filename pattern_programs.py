@@ -525,3 +525,135 @@ for i in range(n-1,0,-1):
     print()
 
 print("\nPattern 83\n")
+for i in range(1,n+1):
+    print(" "*(n-i),end="")
+    for j in range(n-i+1,n+1):
+        print(str(j),end="")
+    for k in range(n-1,n-i,-1):
+        print(str(k),end="")
+    print()
+for i in range(n-1,0,-1):
+    print(" "*(n-i),end="")
+    for j in range(n-i+1,n+1):
+        print(str(j),end="")
+    for k in range(n-1,n-i,-1):
+        print(str(k),end="")
+    print()
+
+print("\nPattern 84\n")
+for i in range(1,n+1):
+    print(" "*(n-i),end="")
+    for j in range(n,n-i,-1):
+        print(str(j),end="")
+    for k in range(n-i+2,n+1):
+        print(str(k),end="")
+    print()
+for i in range(n-1,0,-1):
+    print(" "*(n-i),end="")
+    for j in range(n,n-i,-1):
+        print(str(j),end="")
+    for k in range(n-i+2,n+1):
+        print(str(k),end="")
+    print()
+
+print("\nPattern 85\n")
+for i in range(1,n+1):
+    print(" "*(n-i),end="")
+    for j in range(n,n-i,-1):
+        if j == n or j == n-i+1:
+            print("*"+" "*(i-1),end="")
+        else:
+            print(end=" ")
+    print()
+
+print("\nPattern 86\n")
+for i in range(1,n+1):
+    print(" "*(n-i)+str(i)+" "*(2*i-3)+(" " if str(i) == str(1) else str(i)))
+
+print("\nPattern 87\n")
+for i in range(1,n+1):
+    print(" "*(n-i)+str(n-i+1)+" "*(2*i-3)+(" " if str(i) == str(1) else str(n-i+1)))
+
+print("\nPattern 88\n")
+for i in range(1,n+1):
+    print(" "*(n-i)+chr(64+n-i+1)+" "*(2*i-3)+(chr(64+n-i+1) if str(chr(64+n-i+1)) != str("E") else " " ))
+
+print("\nPattern 89\n")
+for i in range(1,n+1):
+    print(" "*(n-i)+chr(64+i)+" "*(2*i-3)+(chr(64+i) if str(chr(64+i)) != str("A") else " " ))
+
+print("\nPattern 90\n")
+for i in range(n,0,-1):
+    print(" "*(n-i),end="")
+    for j in range(n,n-i,-1):
+        if j == n or j == n-i+1:
+            print("*"+" "*(i-1),end="")
+        else:
+            print(end=" ")
+    print()
+
+print("\nPattern 91\n")
+for i in range(n,0,-1):
+    print(" "*(n-i)+str(n-i+1)+" "*(2*i-3)+(" " if str(n-i+1) == str(5) else str(n-i+1)))
+
+print("\nPattern 92\n")
+for i in range(n,0,-1):
+    print(" "*(n-i)+str(i)+" "*(2*i-3)+(" " if str(i) == str(1) else str(i)))
+
+print("\nPattern 93\n")
+for i in range(n,0,-1):
+    print(" "*(n-i)+chr(65+i-1)+" "*(2*i-3)+(" " if str(chr(65+i-1)) == str("A") else chr(65+i-1)))
+
+print("\nPattern 94\n")
+for i in range(n,0,-1):
+    print(" "*(n-i)+chr(65+n-i)+" "*(2*i-4)+(" " if str(chr(65+n-i)) == str("D") or str(chr(65+n-i)) == str("E") else chr(65+n-i)))
+
+print("\nPattern 95\n")
+for i in range(n,0,-1):
+    print(" "*(n-i)+"*"*n)
+
+print("\nPattern 96\n")
+for i in range(1,n+1):
+    print(" "*(n-i)+"* "*i+" "*(n-i)+"* "*i)
+
+print("\nPattern 97\n")
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        if i%2 == 1:
+            if j%2 == 1:
+                print("1",end="")
+            else:
+                print("0",end="")
+        else:
+            if j%2 == 1:
+                print("0",end="")
+            else:
+                print("1",end="")
+    print()
+
+print("\nPattern 98\n")
+for i in range(1,n+1):
+    print(" "*(2*n-i+2)+"* "*i)
+for i in range(3,2*n):
+    print(" "*(2*n-i+2)+"* "*i)
+for i in range(4,2*n+3):
+    print(" "*(2*n-i+2)+"* "*i)
+for i in range(1,2*n-2):
+    print(" "*(2*n-1)+"* "*3)
+
+print("\nPattern 99\n")
+for i in range(1,n+1):
+    print(" "*(2*n-i)+"* "*i)
+for i in range(1,n+1):
+    print(" "*(n-i+1)+"* "*i+" "*(n-i)+"* "*i)
+
+print("\nPattern 100\n")
+for i in range(1,n+1):
+    print("*"*(2*i))
+    print("*"*(2*i))
+
+print("\nPattern 102\n")  #tripod triange pattern
+for i in range(1,n+1):
+    print(" "*(2*n-i+1)+"* "*i)
+for i in range(1,n+1):
+    print(" "*(n-i+1)+"* "*i+" "*(n-i)+" "*(n-i)+"* "*i)
