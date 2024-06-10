@@ -6,11 +6,10 @@ def bubble_sort(l):   #bubble sort algorithm
         for j in range(len(l)-1-i):
             if l[j] > l[j+1]:
                 l[j],l[j+1] = l[j+1],l[j]
-    return a
+    return l
 
-bub_sort = bubble_sort(a)
+bub_sort = bubble_sort(a.copy())
 
-b = [5,3,2,1,4]
 
 def selection_sort(l):   #selection sort algorithm
     for i in range(len(l)-1):
@@ -21,10 +20,8 @@ def selection_sort(l):   #selection sort algorithm
         l[i], l[min_idx] = l[min_idx], l[i]
     return l
 
-sel_sort = selection_sort(b)
+sel_sort = selection_sort(a.copy())
 
-
-c = [5,3,2,1,4]
 
 def insertion_sort(l): #insertion sort algorithm
     for i in range(1,len(l)):
@@ -37,10 +34,8 @@ def insertion_sort(l): #insertion sort algorithm
         l[j+1] = x 
     return l
 
-ins_sort = insertion_sort(c)
+ins_sort = insertion_sort(a.copy())
 
-
-d = [5,3,2,1,4]
 
 def quick_sort(l): #quick sort algorithm
     def partition(low,high):
@@ -60,13 +55,42 @@ def quick_sort(l): #quick sort algorithm
     qs(0,len(l)-1)
     return l
 
-q_sort = quick_sort(d)
+q_sort = quick_sort(a.copy())
+
+
+def merge_sort(l): #merge sort algorithm
+    def ms(l):
+        if len(l) <= 1:
+            return l
+            
+        mid = len(l) // 2
+        left = ms(l[:mid])
+        right = ms(l[mid:])
+        return merge(left, right)
+
+    def merge(left, right):
+        result = []  
+        i = j = 0  
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                result.append(left[i])
+                i += 1
+            else:
+                result.append(right[j])
+                j += 1
+        result.extend(left[i:])
+        result.extend(right[j:])
+        return result
+    return ms(l)
+
+m_sort = merge_sort(a.copy())
 
 
 print(bub_sort)
 print(sel_sort)
 print(ins_sort)
 print(q_sort)
+print(m_sort)
 
 
 
