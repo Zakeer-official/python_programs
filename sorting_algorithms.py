@@ -43,17 +43,21 @@ ins_sort = insertion_sort(c)
 d = [5,3,2,1,4]
 
 def quick_sort(l): #quick sort algorithm
-    left = 0
-    right = len(l)-1
-    pivot = (len(l) - 1) //2
-    for i in range(1,len(l)):
-        x = l[i]
-        for j in range(i-1,-2,-1):
-            if l[j] > x:
-                l[j+1] = l[j]
-            else:
-                break
-        l[j+1] = x 
+    def partition(low,high):
+        pivot = l[high]
+        i = low - 1 
+        for j in range(low,high):
+            if l[j] <= pivot:
+                i += 1
+                l[i],l[j] = l[j],l[i]
+        l[i+1],l[high] = l[high],l[i+1]
+        return i+1
+    def qs(low,high):
+        if low < high:
+            pi = partition(low,high)
+            qs(low,pi-1)
+            qs(pi+1,high)
+    qs(0,len(l)-1)
     return l
 
 q_sort = quick_sort(d)
