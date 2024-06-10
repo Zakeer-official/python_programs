@@ -86,12 +86,35 @@ def merge_sort(l): #merge sort algorithm
 m_sort = merge_sort(a.copy())
 
 
+def bucket_sort(l):     #bucket sort algorithm
+    max_value = max(l)
+    num_buckets = len(l)
+    buckets = [[] for _ in range(num_buckets)]
+    
+    # Distribute elements into buckets based on their ranges
+    for num in l:
+        bucket_index = int(num / max_value * (num_buckets - 1))
+        buckets[bucket_index].append(num)
+    
+    for bucket in buckets:
+        bucket.sort()
+    
+    sorted_arr = []
+    for bucket in buckets:
+        sorted_arr += bucket
+    
+    return sorted_arr
+  
+buc_sort = bucket_sort(a.copy())
+
+
+
 print(bub_sort)
 print(sel_sort)
 print(ins_sort)
 print(q_sort)
 print(m_sort)
-
+print(buc_sort)
 
 
 
