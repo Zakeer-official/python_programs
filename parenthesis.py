@@ -14,6 +14,8 @@ for i in range(len(s)):
             else:
                 count = 0
                 break
+        else:
+            break
     else:
         break
 if count !=0:
