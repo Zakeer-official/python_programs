@@ -40,8 +40,10 @@ if len(s) != 0:
             if s[i] in list(d.values()):
                 l.append(s[i])
             elif s[i] in list(d.keys()):
-                if d[s[i]] == l[-1]:
+                if l and d[s[i]] == l[-1]:
                     l.pop()
+                else:
+                    break
             else:
                 break
         else:
