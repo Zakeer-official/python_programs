@@ -1,34 +1,34 @@
-class stack:
+class queue:
     def __init__(self,n):
-        self.st = []
+        self.q = []
         self.n = n
     def isempty(self):
-        return len(self.st) == 0
+        return len(self.q) == 0
     def isfull(self):
-        return len(self.st) == self.n
-    def push(self,y):
+        return len(self.q) == self.n
+    def enqueue(self,y):
         if self.isfull():
-            raise "Stack Overflow"
+            raise "Queue Overflow"
         else:
-            self.st.append(y)
-    def pop(self):
+            self.q.insert(0,y)
+    def dequeue(self):
         if self.isempty():
             raise "Stack Underflow"
         else:
-            self.st.pop()
+            self.q.pop()
     
     def print(self):
-        print(self.st)
+        print(self.q)
         
 
 
 
 #Example
 x = 10
-a = stack(x)
+a = queue(x)
 
-a.push(5)
-a.push(10)
-a.pop()
-print(a.print())
+a.enqueue(5)
+a.enqueue(10)
+a.dequeue()
+a.print()
     
